@@ -32,6 +32,33 @@ void inorderPrint(Node* temp)
     inorderPrint(temp->right);
 }
 
+/* Printing preorder traversal of a binary tree */
+void preorderPrint(Node* temp)
+{
+    if (temp == NULL)
+        return;
+ 
+	cout << temp->data << ' ';
+    preorderPrint(temp->left);
+    preorderPrint(temp->right);
+}
+
+/* Printing postorder traversal of a binary tree */
+void postorderPrint(Node* temp)
+{
+    if (temp == NULL)
+        return;
+ 
+    postorderPrint(temp->left);
+    postorderPrint(temp->right);
+	cout << temp->data << ' ';
+}
+
+// Traversal #4
+// https://www.geeksforgeeks.org/print-postorder-from-given-inorder-and-preorder-traversals/
+// Prints postorder traversal from given inorder and preorder traversals
+void printPostOrder(int in[], int pre[], int n)
+
 // #6
 //https://www.geeksforgeeks.org/insertion-in-a-binary-tree-in-level-order/
 Node* InsertNode(Node* root, int data)
